@@ -1,48 +1,6 @@
-body th td button {
-    font-size: 14px;
-    line-height: 1.5;
-    font-family: 'Lato', 'Noto Sans KR', Malgun Gothic, "맑은 고딕", AppleGothic, Dotum, "돋움", sans-serif;
-    color: #000;
-}
-.sub_depth1>li>a{white-space: nowrap;text-decoration: none;color: #000;} /* 줄바꿈 방지 */
- /* --- 사이드 콘텐츠 목록 --- */
-.sub_content{
-    padding: 40px 0 0 0;
-    width: 1600px;
-    margin: 0 auto;
-    position: relative;
-    display:flex;
-}
-.side_content .sub_menu_box{min-height: 500px;padding: 0 0 50px 0;margin-right: 50px;}
-.side_content .sub_menu_box h2{
-    padding: 0 0 14px 0;
-    border-bottom: 1px solid #ececec;
-    font-size: 24px;
-    font-weight: 900;
-    font-family: 'Pretendard-ExtraBold';
-}
-
-.side_content .sub_menu_box .sub_menu_page{margin: 7px 0 0 0;}
-.side_content .sub_menu_box .sub_menu_page>li:first-child{margin: 30px 0 0 0;}
-.side_content .sub_menu_box .sub_menu_page>li{padding: 8px 0 15px 0;font-size: 14px;font-weight: bold;background-image: url(../images/lnb_tit.png);}
-
-.sub_menu_mypage li{margin: 10px 0;}
-.side_cont .sub_menu_box .sub_menu_mypage .sub_depth1{display: block;margin: 5px 0 25px 0;position: static;}
-.side_cont .sub_menu_box .sub_menu_mypage .sub_depth1 li{display: block;padding: 1px 0 0 0;font-weight: normal;}
-.sub_menu_box .sub_depth1 li {position: relative;}
-
-/* --- 콘텐츠 목록 시작 --- */
-.sub_content .content {
-    width: 100%;
-    min-height: 500px;
-    padding: 0;
-}
-
 /* 마이페이지 상단 목록 시작 */
-
-.mypage_main, .mypage_cont {
-    padding: 0 0 50px 0;
-}
+.content{width: 100%;}
+.mypage_main, .mypage_cont {padding: 0 0 50px 0;}
 
 .mypage_top_info {
     width: 100%;

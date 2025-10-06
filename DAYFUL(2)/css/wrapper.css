@@ -1,5 +1,6 @@
 body,div,h1,h2,h3,ul,li,a{margin: 0;padding: 0;}
-body{overflow-x:hidden}
+body{overflow-x:hidden;}
+html, body {height: 100%;margin: 0;}
 *{box-sizing: border-box;} 
 /* 나간 요소 찾기 ↓ */
 /* *{outline: 1px solid red;} */
@@ -11,8 +12,10 @@ button{background: none;border: none;}
     flex-direction: column;
     font-family: 'NanumGothic';
     font-size:15px;
+    min-height: 100%;
 }
-main{max-width:1905px;}
+main{max-width:1920px;flex-grow: 1;}
+.displaynone{display:none;}
 
 /* font 적용 */
 @font-face {
