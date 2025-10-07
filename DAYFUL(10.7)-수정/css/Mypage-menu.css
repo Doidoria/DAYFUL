@@ -1,0 +1,35 @@
+/* --- 사이드 콘텐츠 목록 --- */
+.side_content .sub_menu_box{min-height: 500px;margin-right:50px;}
+.side_content .sub_menu_box h2{
+    padding-bottom:14px;
+    border-bottom: 1px solid #ececec;
+    font-size: 24px;
+    font-weight: bold;
+}
+.sub_menu_mypage{margin-top: 20px;padding-left: 5px;}
+.sub_menu_mypage>li{margin-bottom: 20px;font-weight: 700;}
+.sub_menu_mypage>li::after{
+    content: '';
+    display:block;
+    width: 150px;
+    height: 1px;
+    background: #ececec;
+    margin-top: 20px;
+}
+.sub_depth1{
+    margin-top: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.sub_depth1{padding-left: 10px;}
+.sub_depth1>li>a{
+    white-space: nowrap;
+    text-decoration: none;
+    color: #000;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+

@@ -1,0 +1,118 @@
+body{background-color: #54443f;height: 100vh;}
+.wrapper{width: 650px; height: 100%; margin: 0 auto; background: #f0e5d6;}
+
+/* Header */
+header{width: 100%;height: 100px;}
+.header_wrap{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    padding: 20px 50px;
+}
+
+.title_wrap{color:#54443f;letter-spacing: -1px;}
+.btn_wrap, .page_wrap{width: 100px;text-align: center;}
+.btn_wrap>a, .page_wrap{
+    display: block;
+    width: 100px; height: 40px;
+    background-color: #54443f;
+    line-height: 38px;
+    border:1px solid lightgray;
+    border-radius: 7px;
+}
+.page_wrap,.page_wrap>span{font-size: 17px;font-weight: 500;color: #fff;}
+.btn_wrap>a>span{font-size: 17px;font-weight: 600;color: #fff;}
+
+/* 공통 */
+.page_title{text-align: center;font-size: 25px;justify-content: center;}
+.page_title>h1{color: #3b302d;}
+.img_wrap img{width: 230px;}
+section{margin-top: 70px;}
+
+/* Main Page */
+.main_page_wrap{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.start_btn_wrap{margin-bottom: 25px;text-align: center;margin-top: 40px;}
+.start_btn_wrap>a{
+    display: block;
+    width: 240px;height: 60px;
+    background:#fff;
+    border-radius: 50px;
+    font-size: 25px;
+    font-weight: 500;
+    color:#fff;
+    line-height: 60px;
+    transition: all 0.5s ease;
+    overflow: hidden;
+    position: relative;
+}
+.start_btn_wrap>a:before{
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    background: #54443f;
+    transform-origin: left center;
+    transform: scale(1, 1);
+    transition: transform 0.5s ease;
+}
+.start_btn_wrap>a:hover{color: #54443f;}
+.start_btn_wrap>a:hover::before{
+    transform: scale(0, 1);
+    transform-origin: right center;
+}
+.start_btn_wrap>a>span{position: relative;z-index: 2;}
+.main_img_wrap{position: absolute;bottom: 0;}
+.main_img_wrap>img{width: 650px;}
+
+/* Select Page */
+.btn_gender_wrap{display:flex;gap:50px;justify-content: center;}
+.gender_wrap{display:flex;flex-direction: column;justify-content: center;gap:50px}
+.gender_wrap>button{
+    width: 180px;
+    height: 60px;
+    display: block;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 60px;
+    color: #54443f;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 500;
+}
+
+/* Select Page-공통 */
+.select_page_wrap button:hover{background-color: #54443f; color: #fff;}
+.circle{border-radius: 50%;}
+.page_title img{margin-bottom: 35px;}
+.page_title h2{line-height: 1.3;letter-spacing: -0.5px;}
+.select_btn_wrap{
+    display:flex;
+    flex-direction: column;
+    gap:15px;
+    margin-top: 60px;
+}
+.select_btn_wrap>button{
+    width: 450px;
+    height: 70px;
+    background-color: #fff;
+    border-radius: 10px;
+    margin: 0 auto;
+    text-align: center;
+    line-height: 60px;
+    color: #54443f;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 500;
+}

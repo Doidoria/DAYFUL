@@ -1,0 +1,166 @@
+main{width: 1905px;}
+.section_wrap{width: 1500px;margin: 150px auto;}
+th, td{padding: 15px;}
+tr{border-top: 1px solid #ccc;text-align: center;}
+.main_table{border-top: 2px solid #54443f;border-bottom: 2px solid #54443f;}
+.main_table th{background-color: #fff;}
+.main_table tfoot tr{background-color: #fff;border-top: #54443f;}
+.main_table thead{border-bottom: 1px solid #ccc}
+.main_table thead>tr>th:first-child,
+.main_table .product_info,.main_table tfoot tr{text-align: left;}
+.main_table tfoot{border-top: 1px solid #ccc;}
+.main_table tbody tr td:first-child {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.main_table tbody tr{border-bottom: 1px solid #ccc}
+.main_table .btnNormal{
+    background-image: url("/images/bg_checkbox.png");
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    background-size: cover;
+    border-radius: 2px;
+    border: none;
+    appearance: none;
+    cursor: pointer;
+}
+#product_select_all{margin-right: 12px;}
+.image_wrap>a>img{width: 100px;}
+/* 상품정보 */
+.product_info{padding-left: 0;margin-top: 20px;}
+.product_info a{text-decoration: none;}
+.product_info p{font-size: 14px;}
+.product_info .optChgBtn{
+    display:inline-block;
+    width: 100px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    color: #74777D;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.56px;
+    text-align: center;
+    box-sizing: border-box;
+}
+/* 수량 */
+.quantity{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+input[type="number"]{
+    width: 50px;
+    height: 30px;
+    text-align: center;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-bottom: 10px;
+}
+.change-quantity{
+    border: 1px solid #ccc;
+    background-color: white;
+    color: #74777D;
+    border-radius: 4px;
+    font-size: 14px;
+    cursor: pointer;
+}
+.btn-group>button {
+    font-size: 13px;
+    padding: 5px 12px;
+    background: #54443f;
+    color: white;
+    border: none;
+    border-radius: 3px;
+}
+/* 총 상품금액 */
+.total_wrap{
+    width: 100%;
+    margin-top: 50px;
+    border-top: 2px solid #54443f;
+    border-bottom: 2px solid #54443f;
+    margin-bottom: 20px;
+    font-weight: 600;
+}
+.total_wrap thead{border-bottom: 1px solid #ccc;}
+.total_wrap tbody{height: 120px;}
+.total_price strong{font-size:23px;}
+.total_price>td {font-size: 18px;}
+.total_wrap>tbody>tr>td:nth-child(3) {}
+.total_price td:nth-child(2){position: relative;}
+.total_price td:nth-child(3){position: relative;}
+.tp_Plus,.tp_Equal{
+    position: absolute;
+    top: 50%;
+    left: -6px;
+    transform: translateY(-50%);
+}
+/* 상품주문 선택 */
+.order-buttons{text-align: center;}
+.order-buttons a{
+    color: white;
+    padding: 10px 25px;
+    font-size: 15px;
+    font-weight: 500;
+    border: none;
+    border-radius: 3px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    text-decoration: none;
+}
+.order-buttons a:hover{}
+.order-buttons a:nth-child(1) {
+    background-color: #54443f;
+    width: 140px;
+    height: 40px;
+}
+.order-buttons a:nth-child(2) {
+    background-color: #978884;
+    width: 140px;
+    height: 40px;
+}
+/* 네이버 페이 */
+.pay_wrap{
+    margin-top: 10px;
+    width: 300px;
+    left: 50%;
+    transform: translateX(-50%);
+    position: relative;
+}
+.npay-label{
+    color: #03c75a;
+    font-weight: bold;
+    font-size: 14px;
+}
+.npay-desc{
+    color: #444;
+    font-size: 10px;
+    line-height: 1.4;
+}
+.npay-button{
+    margin-left: 0;
+    background-color: #00DE5A;
+    color: black;
+    font-weight: bold;
+    border: none;
+    border-radius: 4px;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+.npay-button .icon{
+    background: white;
+    border-radius: 50%;
+    font-weight: bold;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

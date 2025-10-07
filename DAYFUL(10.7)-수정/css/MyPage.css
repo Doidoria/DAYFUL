@@ -1,0 +1,311 @@
+/* 사이트꺼 가져올 때의 문제점 ↓
+1. 기존의 wrapper, header, footer와 css 속성 겹침 발생
+
+2. class는 속성만 찾아서 수정하면 되지만 태그(div, img, p...)는 wrapper 공용 css에만 작성할 것,
+이 부분들은 공통 wrapper나 사이트 전체 스타일을 덮어버릴 위험이 높음.
+→ 가져올 때 삭제하거나, .mypage 안으로 범위를 제한해야 합니다. ex( .mypage_main div, img, p )
+
+3. 뭔가 꼬여서 전체 중앙 배치가 이상했는데 다시 .sub_content 작성하니까 적용 되긴함.
+
+4. GPT사용시 만들어줘, 작성해줘X -> 어떤 속성을 사용해야돼?, 예시로 보여줘 = 스스로 찾아서 적용
+
+*/
+
+/* 마이페이지 상단 목록 시작 */
+.sub_content{
+    width: 1250px;
+    margin: 0 auto;
+    position: relative;
+    display:flex;
+    justify-content: space-between;
+}
+.content{min-width: 1000px;} /* 컨텐츠 기본 width 적용 */
+.mypage_top_info {
+    width: 100%;
+    margin: 0 0 20px 0;
+    border: 1px solid #c6c6c6;
+    background: #f7f9f8;
+    height: 194px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.mypage_top_info>div{padding: 25px;} /* mypage_top_info 안의 div 태그 간격 조절 */
+
+.mypage_top_txt {
+    padding: 20px 0 20px 40px;
+    text-align: center;
+    vertical-align: middle;
+    background: #f7f9f8;
+    width: 383px;
+    display: inline-flex;
+    justify-content: center;
+    box-sizing: border-box;
+    justify-content: flex-start; /* 앞의 center를 덮어버림 둘중에 맞는거 사용 */
+}
+.mypage_top_txt .grade_img {padding: 0 20px 10px 0;}
+.mypage_top_txt .grade_img img {max-width: 70px;}
+
+img {border: 0 none;
+    vertical-align: top;/* overflow-clip-margin: content-box; */
+    overflow: clip;}
+
+.mypage_top_txt .grade_txt {
+    text-align: left;
+}
+.mypage_top_txt .grade_txt p {
+    font-size: 15px;
+    line-height: 15px;
+}
+.mypage_top_txt .grade_txt p + p {
+    margin-top: 4px;
+}
+p {
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    unicode-bidi: isolate;
+}
+
+.mypage_top_txt .grade_txt span {
+    color: #333;
+}
+
+.mypage_top_txt .grade_txt .btn_layer {
+    margin: 20px 0 0 0;
+}
+
+.btn_layer {
+    position: relative;
+    display: inline-block;
+}
+
+.mypage_top_txt .grade_txt .btn_layer .btn_gray_list .btn_gray_small {
+    padding: 0 0 0 0;
+    width: 100px;
+    height: 29px;
+    line-height: 29px;
+    text-align: center;
+    box-sizing: border-box;
+    background: #dedede;
+    border: 0 none;
+}
+
+.btn_gray_list .btn_gray_small {
+    font-size: 11px;
+}
+
+.btn_gray_list a, .btn_gray_list button {
+    display: inline-block;
+    vertical-align: middle; 
+}
+
+.mypage_top_txt .grade_txt .btn_layer .btn_gray_list .btn_gray_small em {
+    padding: 0 0 0 0;
+    background: #dedede;
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: -0.03em;
+}
+
+.btn_gray_list a em, .btn_gray_list button em {
+    display: inline-block;
+}
+/* 상단목록 간격,버튼 수정 해야함 (찾아서 해볼 것)
+-> 힌트(1) : margin, padding 문제
+-> 힌트(2) : 속성 자체가 없음(버튼)
+-> 힌트(3) : 부트스트랩의 기본 padding 때문에 개발자 모드로 확인 가능 ( _reboot.scss ) 
+-> 힌트(4) : 전체 text-argin:center 설정하고 grade_txt 영역만 left 설정
+*/
+
+.mypage_top_wallet>ul{margin: 0;padding: 0;} /* 부트스트랩 기본 margin, padding 속성 없애는 방법(덮어쓰기)*/
+
+/* --- 콘텐츠 목록 시작 --- */
+h3 {
+    display: block;
+    font-size: 1.17em;
+}
+.mypage_zone_tit {
+    margin: 0 0 0 0;
+    padding: 0 0 10px 0;
+    font-size: 16px;
+}
+.mypage_zone_tit h3{
+    display: inline-block;
+    font-size: 16px;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+    unicode-bidi: isolate;
+}
+.mypage_zone_tit span {
+    padding: 0 0 0 5px;
+    color: #777777;
+    font-size: 12px;
+    font-weight: normal;
+}
+.mypage_order_info_cont{
+    margin: 0 0 30px 0;
+    padding: 35px 0 35px 0;
+    font-size: 0;
+    border: 1px solid #e3e3e3;
+    border-top: 1px solid #999999;
+    text-align: center;
+}
+
+ol{
+    list-style: none;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    padding-inline-start: 40px;
+    unicode-bidi: isolate;
+}
+.mypage_order_info_cont ol{padding: 20px;margin: 0;} /* 부트스트랩 덮어쓰기 */
+.mypage_order_info_cont ol{
+    display:inline-block;
+    width: 80%;
+    border-right: 1px solid #e3e3e3;
+    vertical-align: middle;
+}
+.mypage_order_info_cont ol li:first-child {
+    padding-left: 10px;
+    background: none 0;
+}
+.mypage_order_info_cont ol li{
+    display: inline-block;
+    width: 15%; /* 크기 부족 10% -> 15% */
+    min-width: 66px;
+    padding: 0 10px 0 30px;
+    font-size: 13px;
+    background: url(../images/mypgae_ing_next_bg.png) no-repeat left 50px; 
+    text-align: center;
+    align-items: center;
+}
+.mypage_order_info_cont ol li b {
+    font-weight: bolder;
+    display: block;
+    padding: 0 0 15px 0;
+}
+.mypage_order_info_cont ol li strong {
+    display: inline-block;
+    width: 52px;
+    height: 52px;
+    padding: 10px 0 0 0;
+    color: #ffffff;
+    font-size: 18px;
+    background: url(../images/mypgae_ing_list_bg.png) no-repeat 0 0;
+    text-align: center;
+    vertical-align: middle;
+    font-weight: bolder;
+}
+/* 간격 적용 안되는거 같은데 뭐가문제? = 부트스트랩이랑 속성 겹침 */
+
+.mypage_order_info_cont .order_case_list {
+    display: inline-block;
+    width: 19%;
+    font-size: 0;
+    text-align: center;
+    vertical-align: middle;
+}
+
+.mypage_order_info_cont .order_case_list ul {
+    display: inline-block;
+    width: 70%;
+    font-size: 0;
+}
+.mypage_order_info_cont .order_case_list ul li:first-child {
+    border-top: none 0;
+}
+.mypage_order_info_cont .order_case_list ul li {
+    padding: 8px 5px 10px 5px;
+    font-size: 12px;
+    border-top: 1px dotted #bfbfbf;
+    text-align: left;
+}
+
+b {
+    font-weight: bolder;
+}
+.mypage_order_info_cont .order_case_list ul li span {
+    float: right;
+}
+.mypage_lately_info {
+    position: relative;
+}
+.mypage_lately_info .btn_board_more {
+    font-weight: bold;
+    color: black;
+    position: absolute;
+    top: 7px;
+    right: 5px;
+    font-size: 12px;
+}
+table {
+    display: table;
+    box-sizing: border-box;
+    text-indent: initial;
+    unicode-bidi: isolate;
+}
+.mypage_table_type table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+    text-align: center;
+}
+col {
+    display: table-column;
+    unicode-bidi: isolate;
+}
+colgroup {
+    display: table-column-group;
+    unicode-bidi: isolate;
+}
+thead {
+    display: table-header-group;
+    vertical-align: middle;
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+tr {
+    display: table-row;
+    vertical-align: inherit; /* 기본값 불필요(가져올때 기본값이라 기본적으로 들어가 있음) */
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+th {
+    display: table-cell;
+    vertical-align: inherit; /* 기본값 불필요(가져올때 기본값이라 기본적으로 들어가 있음) */
+    font-weight: bold;
+    text-align: center;
+    unicode-bidi: isolate;
+}
+td {
+    display: table-cell;
+    vertical-align: inherit; /* 기본값 불필요(가져올때 기본값이라 기본적으로 들어가 있음) */
+    unicode-bidi: isolate;
+}
+tbody {
+    text-align: center;
+    display: table-row-group; /* 옛날 속성 불필요 */
+    vertical-align: middle; 
+    unicode-bidi: isolate;
+    border-color: inherit;
+}
+.mypage_table_type th {
+    padding: 12px 10px 10px 10px;
+    border-top: 1px solid #999999;
+    border-bottom: 1px solid #dbdbdb;
+    background: #f7f7f7;
+}
+.mypage_table_type td {
+    height: 31px;
+    padding: 15px 10px 14px 10px;
+    color: #777777;
+    border-bottom: 1px solid #dbdbdb;
+    border-left: 1px dotted #ededed;
+}

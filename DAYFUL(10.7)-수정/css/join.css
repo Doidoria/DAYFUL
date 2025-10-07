@@ -1,0 +1,70 @@
+main{margin-top: 80px;height: 1550px;}
+form{
+    font-size: 0.8rem;
+    color:#333;
+    width: 800px;
+    margin: 50px auto;
+}
+.join_wrap{height: 400px;}
+.Member_cf_wrap,.j_box_wrap{margin-top: 50px;}
+.Member_cf_wrap{height: 150px;}
+form h2{font-size: 17px;font-weight: bold;}
+form .zipcode-wrap button{
+    width: 75px;
+    height: 25px;
+    background-color: #e9e9e9;
+    border: 1px solid lightgray;
+    border-radius: 2px;
+    margin-left: 5px;
+    font-size: 12px;
+}
+form .zipcode-wrap button:hover{background-color: lightgray;}
+caption{display:none;}
+table{border-collapse: collapse;width: 800px;}
+tbody tr{border: 1px solid lightgray;}
+tbody tr th{
+    text-align: left;
+    padding-left: 15px;
+    background-color: rgb(241, 241, 241);
+}
+tbody tr td{padding-left: 10px;}
+tbody input{
+    width: 150px;
+    height: 25px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+tbody select{
+    width: 70px;
+    height: 25px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+}
+tbody .tel-wrap input{width: 70px;}
+tbody .phone-wrap input{width: 70px;}
+tbody .zipcode-wrap input{width: 100px;}
+tbody .addr-wrap input{width: 400px;}
+
+#personalType_wrap{margin: 15px 0}
+.j_box_wrap{height: 100px;}
+#personal_type0{width: 13px; height: 13px;}
+#mobile_wrap p{margin-top: 7px;}
+#mobile_wrap .btnNormal{
+    background-color: #f1f1f1;
+    border: 1px solid lightgray;
+    text-decoration: none;
+    color: #333;
+    font-size: 15px;
+    font-weight: 500;
+    padding: 5px 10px;   
+}
+#mobile_wrap .btnNormal:hover{background-color: lightgray;}
+.join-end{display: flex; justify-content: center;margin-top: 15px;}
+.join-end input[type=submit]{
+    background-color: #54443f;
+    border: 1px solid #f1f1f1;
+    border-radius: 7px;
+    color: #fff;
+    width: 120px;
+    height: 40px;
+}

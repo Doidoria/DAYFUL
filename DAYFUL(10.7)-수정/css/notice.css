@@ -1,0 +1,66 @@
+
+.section_wrap{width: 1250px;margin: 50px auto;}
+.section_wrap:first-child{margin-top: 150px;}
+.section_wrap a{text-decoration: none;color: #444;}
+
+/* 검색창 */
+.QnA_search_wrap{
+    border: 1px solid #F8F8F8;
+    background-color: #F8F8F8;
+    border-radius: 5px;
+}
+.QnA_search{text-align: center;position: relative;}
+.QnA_search h2{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #342a26;
+}
+.QnA_search input[type="text"]{
+    width: 1080px;
+    height: 40px;
+    margin-bottom: 10px;
+    border: 1px solid lightgray;
+    border-radius: 5px;
+    font-size: 13px;
+    padding: 10px;
+}
+.QnA_search input::placeholder{color: rgb(196, 193, 193);}
+.QnA_search>button{
+    position: absolute;
+    right: 0;
+    top: 0;
+    margin-right: 85px;
+    margin-top: 65px;
+    cursor: pointer;
+}
+.QnA_search>button>img{width: 30px;}
+.search_list{
+    display: flex;
+    margin-left: 60px;
+    gap: 10px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+.search_list li::after{
+    display: inline-block;
+    content: '';
+    width: 1px;
+    height: 10px;
+    background: #C4C4C4;
+    margin: -1px 2px 0 4px;
+}
+.search_list li:last-child::after{display: none;}
+
+/* QnA 목록 */
+.QnA_list{text-align: center;}
+.QnA_list table {border-collapse: collapse;width: 1250px;}
+.QnA_list table th{
+    background-color: #F8F8F8;
+    border-bottom: 1px solid lightgray;
+    border-top: 1px solid #342a26;
+    padding: 12px 10px 13px 10px;
+}
+.QnA_list table tbody tr td>a{font-weight: 600;}
+.QnA_list table td{border-bottom: 1px solid lightgray;padding: 12px 10px 13px 10px;}
